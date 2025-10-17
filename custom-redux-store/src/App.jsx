@@ -5,6 +5,9 @@ function App() {
   console.log(store);
   store.state = 1;
   console.log(store.getState());
+  store.subscribe(() => {
+    console.log("State has changes...")
+  })
   store.dispatch(actions.bugAdded("Bug 1"));
   console.log(store.getState());
 
